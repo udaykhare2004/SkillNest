@@ -12,7 +12,7 @@ SkillNest is a small full‑stack web app that helps students and early professi
 
 - **Authentication**
   - Register / login with JWT.
-  - First registered account is automatically made **admin**.
+  - A specific account (`admin@gmail.com`) is treated as **admin**.
 - **Course catalog**
   - Landing page with marketing copy.
   - Courses listing page with cards and quick enroll.
@@ -135,7 +135,11 @@ The frontend will run on `http://localhost:5173`.
 
 ## Admin Access
 
-- The **very first user** who registers is marked `isAdmin: true` and can access `/admin/courses`.
+- Register with:
+  - **Name**: `admin`
+  - **Email**: `admin@gmail.com`
+  - **Password**: `admin12345`
+- That account will have `isAdmin: true` and can access `/admin/courses`.
 - Additional admins can be created later by updating the user document in MongoDB (set `isAdmin` to `true`).
 
 ## API Overview

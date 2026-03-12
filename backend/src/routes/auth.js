@@ -18,13 +18,13 @@ router.post("/register", async (req, res) => {
     }
 
     const passwordHash = await bcrypt.hash(password, 10);
-    const isFirstUser = (await User.countDocuments()) === 0;
+    const isAdminEmail = email.toLowerCase() === "admin@gmail.com";
 
     const user = await User.create({
       name,
       email,
       passwordHash,
-      isAdmin: isFirstUser
+      isAdmin: isAdminEmail
     });
 
     const token = signToken(user);
