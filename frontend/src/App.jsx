@@ -11,7 +11,7 @@ import Dashboard from "./pages/Dashboard.jsx";
 import AdminCourses from "./pages/AdminCourses.jsx";
 import CourseDetail from "./pages/CourseDetail.jsx";
 
-export const API_BASE_URL = "http://localhost:5000/api";
+export const API_BASE_URL = "https://skillnest-mbor.onrender.com/api";
 
 axios.interceptors.request.use((config) => {
   const token = localStorage.getItem("skillnest_token");
