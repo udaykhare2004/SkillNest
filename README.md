@@ -83,7 +83,7 @@ npm install
 Optional: create a `.env` file in `backend`:
 
 ```bash
-MONGO_URI=mongodb://localhost:27017/skillnest
+MONGO_URI=mongodb+srv://udaykhare1104975_db_user:wZyYKSH7NWbgBp1Y@cluster0.qarm0ie.mongodb.net/skillnest?retryWrites=true&w=majority
 JWT_SECRET=some_long_random_secret
 PORT=5000
 ```
